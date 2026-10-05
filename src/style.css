@@ -168,3 +168,6 @@ footer { margin-top: 90px; font-size: 0.8rem; color: var(--muted); }
   html { scroll-behavior: auto; }
   .reveal > * { opacity: 1; transform: none; transition: none; }
 }
+
+.nav nav a.play { color: var(--accent2); font-weight: 600; }
+@media (max-width: 720px) { .nav nav { display: flex; } .nav nav a:not(.play) { display: none; } }

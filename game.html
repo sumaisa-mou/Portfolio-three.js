@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Drive with Sumaisa — Portfolio Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <script type="module" src="/src/game.js"></script>
+  </head>
+  <body class="game">
+    <canvas id="world"></canvas>
+
+    <div class="hud">
+      <a href="/" class="back">← Classic view</a>
+      <div class="route" id="route"><div class="fill" id="routeFill"></div><div class="nodes" id="nodes"></div><div class="carpin" id="carpin">🏎️</div></div>
+    </div>
+
+    <div class="speedo" id="speedo">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <linearGradient id="sg" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#00e5ff" /><stop offset="0.55" stop-color="#ff2d95" /><stop offset="1" stop-color="#ffd400" />
+          </linearGradient>
+        </defs>
+        <circle class="bgarc" cx="60" cy="60" r="52" />
+        <circle class="arc" id="arc" cx="60" cy="60" r="52" />
+      </svg>
+      <div class="num"><b id="kmh">0</b><span>km/h</span></div>
+      <div class="boost" id="boost">NITRO</div>
+    </div>
+
+    <div class="hint" id="hint">Hold <kbd>↑</kbd> to drive · <kbd>←</kbd> <kbd>→</kbd> steer · <kbd>Shift</kbd> nitro</div>
+
+    <div class="intro" id="intro">
+      <div class="sun"></div>
+      <h1>Drive with<br />Sumaisa</h1>
+      <p class="sub">Cruise through a neon career — 9 stops, 7+ years, one fast car.</p>
+      <div class="bottom">
+      <button id="start">Start engine</button>
+      <p class="keys"><kbd>↑</kbd> gas · <kbd>↓</kbd> brake · <kbd>←</kbd> <kbd>→</kbd> steer · <kbd>Shift</kbd> nitro</p>
+      </div>
+    </div>
+
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+
+    <div class="pad">
+      <div class="side">
+        <button id="btnL" aria-label="Steer left">◀</button>
+        <button id="btnR" aria-label="Steer right">▶</button>
+      </div>
+      <div class="side">
+        <button id="btnN" class="nitro" aria-label="Nitro">⚡</button>
+        <button id="btnB" aria-label="Brake">■</button>
+        <button id="btnG" class="gas" aria-label="Gas">▲</button>
+      </div>
+    </div>
+  </body>
+</html>
